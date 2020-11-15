@@ -981,6 +981,7 @@
 @media (max-width: 600px) {
   #header {
     background: url(../img/interior-edited-small.jpg) no-repeat center center/cover !important;
+    background-attachment: fixed !important;
   }
   .header-service-content h2 {
     font-size: 1.8rem;
