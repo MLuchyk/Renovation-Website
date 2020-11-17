@@ -343,10 +343,27 @@
   #header-project .main-nav-list {
     font-size: 1rem;
   }
-  #header svg,
-  #header-service svg,
-  #header-project svg {
+  #header .navbar-logo,
+  #header-service .navbar-logo,
+  #header-project .navbar-logo {
     padding-top: 0.3rem;
+  }
+  #header .language,
+  #header-service .language,
+  #header-project .language {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  #header .main-nav-link,
+  #header-service .main-nav-link,
+  #header-project .main-nav-link {
+    padding: 0 0.3rem;
+  }
+  #language-list {
+    margin-left: 0rem !important;
+  }
+  #language-list-last {
+    right: 2rem !important;
   }
   #services .services-wrapper-cards {
     -ms-grid-columns: (1fr)[2];
@@ -445,9 +462,9 @@
   #header-project .main-nav-link {
     padding: 0rem;
   }
-  #header .main-nav svg,
-  #header-service .main-nav svg,
-  #header-project .main-nav svg {
+  #header .main-nav .navbar-logo,
+  #header-service .main-nav .navbar-logo,
+  #header-project .main-nav .navbar-logo {
     margin-left: 1rem;
   }
   #header .main-nav-list,
@@ -484,6 +501,29 @@
   #header-project .nav-active {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  #header .language,
+  #header-service .language,
+  #header-project .language {
+    top: 0.2rem;
+  }
+  #header #language-list,
+  #header-service #language-list,
+  #header-project #language-list {
+    padding-bottom: 3rem;
+  }
+  #header #language-list-last,
+  #header-service #language-list-last,
+  #header-project #language-list-last {
+    bottom: 4vh;
+    right: 50% !important;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  #header .language-arrow,
+  #header-service .language-arrow,
+  #header-project .language-arrow {
+    padding: 0.2rem 0;
   }
   #header .burger,
   #header-service .burger,
@@ -834,7 +874,7 @@
   }
 }
 
-@media (max-height: 540px) {
+@media (max-height: 540px) and (max-width: 811px) {
   #header .main-nav,
   #header-service .main-nav,
   #header-project .main-nav {
@@ -846,6 +886,9 @@
     top: 5rem;
     height: 81vh;
   }
+}
+
+@media (max-height: 540px) {
   #header h1 {
     font-size: 3.5rem;
   }
@@ -1257,6 +1300,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.1rem;
+  position: relative;
 }
 
 .main-nav-list li {
@@ -1286,6 +1330,47 @@ h3 {
 .main-nav svg:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.language {
+  width: 1.9rem;
+  height: 1.9rem;
+  position: absolute;
+  top: 0;
+  left: 0.1rem;
+}
+
+#language-list {
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-left: 1rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#language-list:hover {
+  color: #fc9c03;
+}
+
+#language-list-last {
+  position: absolute;
+  padding-left: 2.5rem;
+  bottom: -0.8rem;
+  right: 2.1rem;
+  display: none;
+}
+
+#language-list-last a:hover {
+  color: #fc9c03;
+}
+
+.language-wrapper #language-list-last {
+  right: 1rem;
+}
+
+.list-display {
+  display: block !important;
 }
 
 .burger {

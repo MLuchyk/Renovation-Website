@@ -102,3 +102,11 @@ arrowsecond.addEventListener("click", function () {
 arrowthird.addEventListener("click", function () {
   listthird.classList.toggle("list-block");
 });
+
+//Language Switcher
+const languageList = document.getElementById("language-list");
+const lastLanguageList = document.getElementById("language-list-last");
+
+languageList.addEventListener("click", function () {
+  lastLanguageList.classList.toggle("list-display");
+});

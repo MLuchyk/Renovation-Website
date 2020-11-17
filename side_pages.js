@@ -29,3 +29,10 @@ burger.addEventListener("click", function () {
 logo.addEventListener("click", function () {
   ul.classList.remove("nav-active");
 });
+//Language Switcher
+const languageList = document.getElementById("language-list");
+const lastLanguageList = document.getElementById("language-list-last");
+
+languageList.addEventListener("click", function () {
+  lastLanguageList.classList.toggle("list-display");
+});
